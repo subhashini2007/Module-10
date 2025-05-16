@@ -27,8 +27,20 @@ To develop a Python program that implements a Circular Queue:
 ---
 
 ## 💻 Program:
-Add Code Here
+```
+import queue
+de=[]
+n=int(input())
+for i in range(n):
+    de.append(int(input()))
+for i in range(3):
+    de.pop()
+print(de)
+```
 
 ### Output:
+![image](https://github.com/user-attachments/assets/674f3c92-2cce-4be5-80be-8875da0fb73b)
+
+
 
 ## Result:
