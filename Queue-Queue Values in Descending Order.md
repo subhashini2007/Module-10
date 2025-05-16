@@ -36,6 +36,7 @@ while not q.empty():
 ```
 
 ### Output:
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/70f3322e-68ef-4989-8fb4-6c26c334c848)
+
 
 ## Result:
