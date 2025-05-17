@@ -1,6 +1,6 @@
 # 🔄 Types of Queue-Circular Queue in Python
 
-This project demonstrates the implementation of a **Circular Queue** in Python. The queue accepts 3 user values, performs enqueue and dequeue operations, and displays the removed values.
+This project demonstrates the implementation of a **Circular Queue** in Python. The queue accepts 5 user values, performs enqueue and dequeue operations, and displays the removed values.
 
 ---
 
@@ -8,7 +8,7 @@ This project demonstrates the implementation of a **Circular Queue** in Python. 
 
 To develop a Python program that implements a Circular Queue:
 - Accepts 3 values from the user
-- Removes the 3 values from the queue
+- Removes the 5 values from the queue
 - Displays the removed values
 
 ---
@@ -27,8 +27,48 @@ To develop a Python program that implements a Circular Queue:
 ---
 
 ## 💻 Program:
-Add Code Here
+```
+class MyCircularQueue():
+    def __init__(self, k):
+        self.k = k
+        self.queue = [None] * k
+        self.head = self.tail = -1
+    def enqueue(self, data):
+        if ((self.tail + 1) % self.k == self.head):
+            print("The circular queue is full\n")
+        elif (self.head == -1):
+            self.head = 0
+            self.tail = 0
+            self.queue[self.tail] = data
+        else:
+            self.tail = (self.tail + 1) % self.k
+            self.queue[self.tail] = data
+    #
+    def printCQueue(self):
+        if(self.head == -1):
+            print("No element in the circular queue")
+        elif (self.tail >= self.head):
+            for i in range(self.head, self.tail + 1):
+                print(self.queue[i], end=" ")
+            print()
+        else:
+            for i in range(self.head, self.k):
+                print(self.queue[i], end=" ")
+            for i in range(0, self.tail + 1):
+                print(self.queue[i], end=" ")
+            print()
+obj = MyCircularQueue(5)
+for i in range(5):
+    obj.enqueue(int(input()))
+obj.printCQueue()
+    
+
+
+```
 
 ### Output:
+![image](https://github.com/user-attachments/assets/720a0a64-6a5d-46f5-a6b8-410096c98771)
+
 
 ## Result:
+Thus the program is successfully verified.
